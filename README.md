@@ -31,3 +31,17 @@ DevSync was built to solve these architectural challenges:
 2. **Analyze:** Enter any GitHub handle (e.g., `syedmqasim029`) in the Profile Analyzer box and hit "Analyze" to see their stats.
 3. **Authenticate:** Click **Sign In** at the top to securely log in using your GitHub account and unlock the developer feed.
 
+🏗️ Tech Stack
+Frontend: React + Vite (Hosted on Netlify Edge CDN).
+
+Backend: Node.js + Express (Hosted dynamically on Render).
+
+Authentication: GitHub OAuth 2.0.
+
+## 🤝 Contributing
+Since this project is in active Beta, contributions, bug reports, and feature requests are highly welcome! Feel free to open an issue or submit a PR.
+
+## 👨‍💻 Author
+Syed Muhammad Qasim
+
+GitHub: @syedmqasim029
