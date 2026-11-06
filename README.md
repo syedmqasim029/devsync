@@ -31,10 +31,3 @@ DevSync was built to solve these architectural challenges:
 2. **Analyze:** Enter any GitHub handle (e.g., `syedmqasim029`) in the Profile Analyzer box and hit "Analyze" to see their stats.
 3. **Authenticate:** Click **Sign In** at the top to securely log in using your GitHub account and unlock the developer feed.
 
-### For Developers (Run Locally)
-Want to test the code on your own machine? Follow these steps:
-
-**1. Clone the repository**
-```bash
-git clone [https://github.com/syedmqasim029/devsync.git](https://github.com/syedmqasim029/devsync.git)
-cd devsync
