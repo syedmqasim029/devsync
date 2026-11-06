@@ -1,0 +1,36 @@
+# ==============================================================================
+# DevSync — Netlify Production Configuration (Frontend CDN + Edge API Proxy)
+# ==============================================================================
+# IMPORTANT: Replace "https://devsync-api.onrender.com" below with your actual
+# live Render Web Service URL once Phase 2 (Render deployment) is complete.
+# ==============================================================================
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# 1. Proxy all /api/* requests at the Netlify Edge to the Render Express Backend
+#    Using status = 200 turns this into a transparent reverse proxy (not a 301 redirect),
+#    eliminating cross-origin CORS preflights and third-party cookie restrictions.
+[[redirects]]
+  from = "/api/*"
+  to = "https://devsync-api.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+# 2. Proxy GitHub OAuth 2.0 callback requests to the Render Express Backend
+[[redirects]]
+  from = "/auth/callback*"
+  to = "https://devsync-api.onrender.com/auth/callback:splat"
+  status = 200
+  force = true
+
+# 3. SPA Catch-All Fallback for React Router (/learn, /feed, /mentorship, /portfolio/*)
+#    Must ALWAYS be placed last so it only catches non-API client-side routes.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

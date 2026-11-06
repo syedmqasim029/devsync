@@ -1,0 +1,6 @@
+{
+  "name": "DevSync — Student Open-Source Issue Matcher",
+  "description": "An HCI-driven web application that matches IT and Computer Science university students with beginner-friendly open-source GitHub tasks using skill analysis and guided contribution checklists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
